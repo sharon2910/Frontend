@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events</h1>
+
+    <label for="message">enter ur name</label>
+	<input type="text" id="message" name="input_1">	<br><br><hr>
+
+    <div id="myelement" onmouseover="highlight()" onmouseout="unhighlight()">This is my element</div><br><hr>
+
+    <div id="myele2">Hi guys</div><br><hr>
+
+    <form>
+        <label for="fname">NAME</label>
+        <input type="text" id="inp_1" name="fname"><br>
+    </form>
+    
+    <script>
+
+        const input=document.getElementById("message");
+		input.addEventListener('change',function(){
+        const value = input.value;
+		console.log(`hi,${value}!`);
+		});
+
+
+       function highlight(){
+        document.getElementById("myelement").style.backgroundColor = "yellow";
+        };
+        function unhighlight(){
+            document.getElementById("myelement").style.backgroundColor = "green";
+        };
+
+        const input1= document.getElementById("myele2");
+        input1.addEventListener("mouseover",function(){
+        input1.style.backgroundColor="cyan";
+        });
+
+        input1.addEventListener("mouseout",function(){
+        input1.style.backgroundColor="red";
+        });
+
+        const input2 = document.getElementById("inp_1");
+        input2.addEventListener("keydown",function(){
+            console.log("Event down Example : you pressed "+ event.key + " key");
+        });
+        // input2.addEventListener("keydown",function(){
+        //     console.log("Event down Example : you pressed "+ event.key + " key");
+        // });
+
+        
+
+
+    </script>
+</body>
+</html>

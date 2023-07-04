@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Intro to js</title>
+    <style></style>
+</head>
+<body>
+
+    <p id="jsdemo" style="display:none">Hello World!</p>
+
+    <h2>The window.print() Method</h2>
+    <p>Click the button to print the current page.</p>
+    <button onclick="window.print()">Print this page</button>
+
+    <h2>JavaScript Functions</h2>
+
+<p id="funid"></p>
+<h2>JavaScript Booleans</h2>
+<p id="myClass"></p>
+
+
+
+    <script>
+        // document.getElementById("jsdemo").style.display = "none";
+        // document.getElementById("jsdemo").style.fontSize = "35px";
+        // document.getElementById("jsdemo").style.display = "block";
+        // document.write("SHaron");
+        // window.alert("Hi!!");
+        // console.log(10+5);
+        // console.log("sharon");
+
+        // var courseName = "Frontend";
+        // var courseName;
+        // document.write(courseName);
+
+        var result = myFunction(6, 3);
+document.getElementById("funid").innerHTML = result;
+
+function myFunction(x, y) {
+  return x * y;
+}
+document.getElementById("myClass").innerHTML =
+"500 is " + Boolean(500) + "<br>" +
+"3.14 is " + Boolean(3.14) + "<br>" +
+"-15 is " + Boolean(-15) + "<br>" +
+"Any (not empty) string is " + Boolean("Hello") + "<br>" +
+"Even the string 'false' is " + Boolean('false') + "<br>" +
+"Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+
+
+    </script>
+</body>
+</html>
+"Sharon"
+"/"Sharon/""

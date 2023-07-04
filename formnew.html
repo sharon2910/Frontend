@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form style</title>
+    <style>
+        input[type=text]{
+            background-color: antiquewhite;
+            border: none;
+            border-bottom: solid black 1px;
+            padding: 15px;
+        }
+        input[type=text]:focus{
+            background-color: rgb(195, 132, 49);
+            border: none;
+            border-bottom: solid rgb(133, 95, 193) 1px;
+            padding: 15px;
+        }
+        input[type=password]{
+            background-color: pink;
+            padding: 5px 10px;
+            border: none;
+            border-bottom: 2px solid red;
+
+        }
+        input[type=Submit]{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form>
+            <label for=" fname">FIRST NAME</label>
+            <input type="text" id="fname" name="fname" value="Shruthi"><br>
+
+            <label for="lname">LAST NAME</label>
+            <input type="text" id="lname" name="lname" value=""><br>
+
+            <label for="Password">Password</label>
+            <input type="password" id="password" name="password" value="sharon" required>
+
+            <input type="Submit" value="submit"><br>
+    </form>
+    
+</body>
+</html>

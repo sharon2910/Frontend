@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays in JavaScript</title>
+    </head>
+    <body>
+        <h1>JavaScript Arrays</h1>
+        <h6>For loop</h6>
+        <p id="for1"></p>
+        <h6>For each</h6>
+        <p id="for2"></p>
+
+        <script>
+            const name = ["Sharon","Karen","Pramila","Arun","George"];
+            let nl = name.length;
+            let text = []+" ";
+            for ( let i=0; i<nl ; i++){
+                text += name[i];
+            }
+             text+=[]
+             
+             ;
+document.getElementById("for1").innerHTML = text;
+
+             const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text2 = "<ul>";
+fruits.forEach(myFunction);
+text2 += "</ul>";
+
+function myFunction(value) {
+  text2 += "<li>" + value + "</li>";
+}
+             document.getElementById("for2").innerHTML = text2;
+
+        </script>
+    </body>
+</html>

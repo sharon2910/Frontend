@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exceptional handling</title>
+    
+</head>
+<body>
+    <h1>Exceptional handling</h1>
+    <script>
+        const numerator=100,denominator='a';
+        try{
+            console.log(numerator/denominator);
+            console.log(a);
+            throw exception;
+        }
+        catch(error){
+            console.log('An error caught');
+            console.log('Error message:'+error);
+        }
+        finally{
+            console.log('Finally will execute everytime');
+        }
+
+
+        // try{
+        //     console.log(1/0);
+        // }
+        // catch(error){
+        //     console.log('An error caught');
+        //     console.log('Error message:'+error);
+        // }
+        // finally{
+        //     console.log('Finally will execute everytime');
+        // }
+     
+
+    //     setTimeout(function(){
+    //         try{
+    //             console.log(1/0);
+    //             throw exception;
+    //         }
+    //     catch(e){
+    //         console.log('Error is caught',e);
+    //     }
+    //     finally{
+    //         console.log('Finally will execute everytime');
+    //     }
+    // },3000);
+    
+    
+    const num=50;
+    try{
+    if(num>70)
+    {
+        console.log("Success");
+    }
+    else{
+        console.log("I'm in else block");
+        throw new Error('Number is low');
+    }
+    console.log("Will be printed if the  code is true");}
+    catch(error){
+        console.log("Error caught");
+        console.log("Error is "+error)
+    }
+   
+
+
+    </script>
+</body>
+</html>

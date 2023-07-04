@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript introduction</title>
+    </head>
+    <body>
+        <p id="intro"></p>
+        <p id="result"></p>
+        
+        <script>
+            document.getElementById("intro").innerHTML="this is my program";
+            console.log(10+3);
+            let a=5;
+            let b=6;
+            let c = a+b;
+            document.getElementById("result").innerHTML="the value of c is " +c;
+
+            var x=1;
+            if(true){
+                const x=2;
+                console.log(x);
+            }
+            console.log(x);
+
+            var x=1;
+            function outer(){
+                var y=2;
+            function inner(){
+                var z=3;
+                console.log(x,y,z);
+            }
+            inner();
+            console.log(x,y);
+            }
+            outer();
+            console.log(x);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    padding:0;
+    margin:0;
+    background-color:rgb(171, 218, 53);}
+h1{
+    color: blue;
+    background-color: azure;
+    text-align: center;
+}
+p{
+    text-align: center;
+    background-color: rgb(188, 94, 77);
+}
+.para1{background-color: blueviolet;}
+.para2{background-color: rgb(23, 159, 114);}
+.para3{background-color:blue;}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operators</title>
+</head>
+<body>
+    
+    
+    <script>
+        // const age = 10;
+        // const isAdult = age>=18 ? 'an adult' : age>=13 ? 'a teenager' : 'a child';
+        // console.log("you are "+isAdult);
+
+        // const age1 = 18;
+        // const isAdult1 = age>=18 ;
+
+        function greet(name){
+            console.log(`Hello,${name}! My name is ${this.name}.`);
+        }
+        const person = {name : 'Sharu'};
+
+        greet.call(person,'John');
+
+        //method invocation
+        // var person = {
+        //     name : "Sharon",
+        //     fun(){
+        //         console.log("this.name")
+        //     }.
+        // }
+        // document.getElementById("id_").innerHTML=person.name; //Sharon
+        // person.greet(); //Sharon
+
+        //function invocation with parameters
+        //method invocation
+        //Constructor invocation
+        //Apply and call invocaion
+        
+
+
+    </script>
+</body>
+</html>

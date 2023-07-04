@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API's</title>
+    </head>
+    <body>
+        <h1>API's</h1>
+        <h2>Geo-locations</h2>
+        <button onclick="getLocation()">Try it</button>
+    
+     <p id="API"></p>
+
+     <h2>Drag and Drop</h2>
+     <div id="pic" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
+     <img src="C:\Users\user\Downloads\dog.jpg" id="pic" draggable="true" ondragstart="drag(event)" width="336" height="100">
+
+
+     <script>
+
+        var x = document.getElementById("API");
+        
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else{
+                x=innerHTML = "Geolocation is not supported by the browser"
+            }
+        }
+        function showPosition(position){
+            x.innerHTML = "Latitude:" + position.coords.latitude +
+            "<br>Longitude:" + position.coords.longitude +
+            "<br>Accuracy:" + position.coords.accuracy;
+        }
+     </script>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+ const data1 ='[{"name" :"Sharon", "age": "23" },{"name":"Sagar", "age":"19"}]'; //string to object literal
+ 
+ const data ={"name":"Sharon","age":"23","email":"sharonruby2910@gmail.com"};   //object literal to string to object literal
+
+ const text1 = '{"name":"John","age":"20","city":"New York"}';

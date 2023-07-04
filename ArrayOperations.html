@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays and Operations</title>
+    </head>
+    <body>
+        <h1>JavaScript Arrays And Operations</h1>
+        <p ><b>Array Literal method</b></p>
+        <p id="Stuid1"></p><hr>
+        <p><b>Input Array elements using index</b></p>
+        <p id="Stuid2"></p><hr>
+        <p><b>Overwriting the Array value in student</b></p>
+        <p id="Stuid3"></p><hr>
+        <p><b>Accessing Array elemts using index </b></p>
+        <p id="Stuid4"></p><hr>
+        <p><b>Array Objects</b></p>
+        <p id="Stuid5"></p><hr>
+        <p><b>Array length</b></p>
+        <p id="Stuid6"></p><hr>
+        <p><b>Accessing the last array element using length</b></p>
+        <p id="Stuid7"></p><hr>
+        <p><b>Array loops</b></p>
+        <p id="Stuid8"></p><hr>
+        <p><b>Array for each loop</b></p>
+        <p id="Stuid9"></p><hr>
+        <script>
+            const Students1 = ["Arun","Pramila","Sharon","Karen"];
+            Students1=["Sagar","Syed","Niharika"]
+
+            const Students2 = [];
+            Students2[0]="Balu";
+
+            const Students3 = new Array ("Sagar","Syed","Niharika");
+            Students3[0]="Khalid";
+
+            const Students4 = {Student1 :"Sharon",Student2:"Karen",Student3:"Alice"};
+
+            const Students5 =["mona","hema","sandhya","sherin"];
+            let text = [];
+            for(let i= 0; i<Students5.length;i++){
+                text += Students5[i];
+            }
+
+            // Students5.forEach(myFun1);
+            // let text1 = [];
+            // document.getElementById("Stuid9").innerHTML = text1;
+            // function myFun1(value){
+            //     text1 += value;
+            // }
+            
+            document.getElementById("Stuid1").innerHTML = Students1;
+            document.getElementById("Stuid2").innerHTML = Students2;
+            document.getElementById("Stuid3").innerHTML = Students3;
+            document.getElementById("Stuid4").innerHTML = Students3[2];
+            document.getElementById("Stuid5").innerHTML = Students4.Student1;
+            document.getElementById("Stuid6").innerHTML = Students1.length;Students1[Students1.length -1]
+            document.getElementById("Stuid7").innerHTML = Students1[Students1.length -1];
+            document.getElementById("Stuid8").innerHTML = text;
+            
+        </script>
+    </body>
+</html>

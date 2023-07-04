@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Iterations</title>
+</head>
+<body>
+    <h1>Array Iterations</h1>
+    <p><b>Array numbers iteration</b></p>
+    <p id="id1"></p><hr>
+    <p><b>Array mapping</b></p>
+    <p id="id2"></p><hr>
+    <p><b>Array Filter()</b></p>
+    <p id="id3"></p><hr>
+    <p><b>Array reduce()</b></p>
+    <p id="id4"></p><hr>
+    <p><b>Array every()</b></p>
+    <p id="id5"></p><hr>
+    <p><b>Array some()</b></p>
+    <p id="id6"></p><hr>
+    <p><b>Array find()</b></p>
+    <p id="id7"></p><hr>
+    <p><b>Array findIndex()</b></p>
+    <p id="id8"></p><hr>
+    <p><b>Array from()</b></p>
+    <p id="id9"></p><hr>
+    <p><b>Array Keys()</b></p>
+    <p id="id10"></p><hr>
+    <p><b>Array entries()</b></p>
+    <p id="id11"></p><hr>
+    <!-- <p><b>Array indexOf()</b></p>
+    <p id="id12"></p><hr>
+    <p><b>Array LastIndexOf()</b></p>
+    <p id="id13"></p><hr> -->
+    <p><b>Array includes()</b></p>
+    <p id="id14"></p><hr>
+    <p id="id15"></p>
+    <script>
+
+const students = ["Arun", "Varun", "Arav"];
+let length = students.push("Manav");
+document.getElementById("id15").innerHTML = length;
+
+
+        const num = [12,6,7,32,9];
+        const cars = ["BMW","Audi","Maruthi","Tata","Audi"];
+
+        // For-Each iteration
+        let text=" ";
+        num.forEach(myfun1);
+        document.getElementById("id1").innerHTML=text;
+        function myfun1(value){
+            text+=value+"<br>";
+        }
+        
+        // Array mapping
+        const arrmap = num.map(myfun2);
+        document.getElementById("id2").innerHTML = arrmap;
+        function myfun2(value){
+            return value *2;
+        }
+
+        // Array Comparision using filter
+        const over10 = num.filter(myfun3);
+        document.getElementById("id3").innerHTML = over10;
+        function myfun3(value){
+            return value>10;
+        }
+
+        //Array reduce 
+        let reduce = num.reduce(myfun4,30);
+        document.getElementById("id4").innerHTML = reduce;
+        function myfun4(total,value){
+            return total+value;
+        }
+
+        // //Array Every()
+        // let every = num.every(myfun5);
+        // documnet.getElementById("id5").innerHTML = "The result of comparision is" + every;
+        // function myfun5(value){
+        //     return value > 20;
+        // }
+
+        // //Array Some()
+        // let some = num.some(myfun6);
+        // document.getElementById("id6").innerHTML = "Some() is" +some;
+        // function myfun6(value){
+        //     return value>0;
+        // }
+
+       //ArrayIndexOf
+       //ArrayLastIndexOf
+
+        //Array find()
+        let find = num.findIndex(myfun7);
+        document.getElementById("id7").innerHTML = find;
+        function myfun7(value,index,array){
+            return value >50;
+        }
+
+        //Array findindex()
+        let findindex = num.findIndex(myfun8);
+        document.getElementById("id8").innerHTML = findindex;
+        function myfun8(value,index,array){
+            return value >20;
+        }
+
+        //Array from()
+        const namef = Array.from("SHARONRUBY");
+        document.getElementById("id9").innerHTML = namef;
+        console.log(namef);
+
+        //Array Keys()
+        const keys = cars.keys();
+        let text1 = " ";
+        for(let x of keys){
+            text1 += x + "<br>";
+        }
+        document.getElementById("id10").innerHTML = text1;
+
+        //Array Entries()
+        const entries = cars.entries();
+        let text2 =" ";
+        for(let x of entries){
+            text2 += x + "<br>";
+        }
+        document.getElementById("id11").innerHTML = text2;
+        console.log(text2);
+
+        // //Array includes()
+        // const includes = cars.includes();
+        // document.getElementById("id14").innerHTML = includes;
+
+    </script>
+</body>
+</html>

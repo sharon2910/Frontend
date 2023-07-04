@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Graphics</title>
+    </head>
+    <body>
+
+        <video >
+            <source src="C:\Users\user\Downloads\waves.mp4" type="video/mp4" type="video/ogg">
+        </video><br>
+          
+<div style="text-align:center"> 
+    <button onclick="playPause()">Play/Pause</button> 
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <br><br>
+    <video id="video" width="420" contols="control">
+      <source src="C:\Users\user\Downloads\waves.mp4" type="video/mp4" ">
+      
+      Your browser does not support HTML video.
+    </video>
+  </div>
+
+        <canvas id="canvas" height="100" width="200" style="border:1px solid black">Sharon</canvas>
+
+        <h4>SVG rectangle</h4>
+        <svg width="100%" height="100%">
+            <rect width="400" height="100"style="fill:blue;stroke-width:10;stroke:black">
+            sorry does not support inline
+        </svg>
+
+        <script>
+            //Draw a line
+            var c = document.getElementById("canvas");
+            var ctx=c.getContext("2d");
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+
+            var myVideo = document.getElementById("video"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+
+        </script>
+    </body>
+</html>

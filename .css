@@ -1,0 +1,41 @@
+ul,li,nav{
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+}
+nav{
+display: block;
+border:2px solid black  ;
+text-decoration: none;
+font-size:large;
+background-image: radial-gradient(circle at center,rgb(57, 199, 194) ,pink 70%);
+text-overflow: ellipsis;
+text-align: end;
+}
+.nbar a{
+text-decoration: none;
+}
+.sea{
+    background-color: rgb(59, 224, 224);
+    font-size: 50px;
+    text-align: center;
+    background-image:linear-gradient(to right,rgb(206, 128, 219) 10%,rgb(220, 69, 157)20%,white 50%,rgb(206, 123, 219),rgb(81, 213, 239));
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite; 
+}
+.pic{
+    text-align: center;
+    border:1px solid black;
+    background-color: aqua;
+}
+.conatiner{
+    border:solid 1px black;   
+}
+.foot{
+    background-color: brown;
+    color:antiquewhite;
+    text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <p>String to Object using parse</p>
+    <p id="id01">JSON prog</p><hr>
+    <p>Object to String using Stringify and back to object using Parse</p>
+    <p id="id02"></p>
+    <p id="id03"></p><hr>
+    <p>accessing objects 'using dot' and 'bracket'  notations :object.name, object["name"] </p><hr>
+    <p>Looping of json objects</p>
+    <p id="id04"></p><hr>
+    <p>Looping of JSON array</p>
+    <p id="id05"></p>
+    <script>
+        const text = '{"name":"John","age":"20","city":"New York"}'//string
+        const object = JSON.parse(text);
+        document.getElementById("id01").innerHTML="Parse method : "+object["name"] + ", " +object.age+ ", "+object.city;
+
+        const data ={"name":"Sharon","age":"23","email":"sharonruby2910@gmail.com"};//objects literals
+        const jsondata=JSON.stringify(data);
+        document.getElementById("id02").innerHTML = "Stringify method: "+jsondata;
+        const jsondata2 = JSON.parse(jsondata);
+        document.getElementById("id03").innerHTML= "Parse method: "+jsondata2.name +", "+jsondata2.email;
+
+
+
+        const text1 = '{"name":"John","age":"20","city":"New York"}';
+        const object1 = JSON.parse(text1);
+        let text2 = "";
+        for(const x in object1){
+            text2 += x + ":" + object1[x]+", ";
+        }
+        document.getElementById("id04").innerHTML=text2;
+
+        const fruits ='{"name":"Sharon","age":"23","fruit":["Mango","Banana","Orange","Kiwi"]}';
+        const to_object =JSON.parse(fruits);
+        let text3="";
+        for(let i in to_object.fruits){
+            text3 += to_object.fruits[i]+ ",";
+        }
+        document.getElementById("id05").innerHTML = text3;
+    </script>
+</body>
+</html>

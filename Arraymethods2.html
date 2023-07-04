@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Methods 2</title>
+    </head>
+    <body>
+        <h1>Array Methods Class 2</h1>
+        <p><b>Ascending()</b></p>
+        <p id="id1"></p>
+        <p id="id1_1"></p><hr>
+        
+        <p><b>reverse using sort function</b></p>
+        <p id="id2"></p>
+        <p id="id2_1"></p><hr>
+        
+        <h2>Sorting numbers</h2>
+        <p>8,10,1,100,7,50</p>
+       
+        <button onclick="alpha()" >Sort Alpha</button>
+        <button onclick="numeric()">Sort Numeric</button>
+        <button onclick="min()">Min Math</button>
+        <button onclick="max()">Max Math</button>
+        <p id="num_id"></p>
+
+        <script>
+            const num=[8,10,1,100,7,50];
+            
+            document.getElementById("id1").innerHTML = num.sort();
+            document.getElementById("id1_1").innerHTML = num.sort(function(a,b){return a-b});
+            document.getElementById("id2").innerHTML = num.sort(function(a,b){return b-a});
+            document.getElementById("id2_1").innerHTML = num.reverse();
+            
+            function alpha()    
+            {
+                let alp_result = num.sort();
+                document.getElementById("num_id").innerHTML = alp_result;
+            }
+            function numeric()
+            {
+                let numric_result = num.sort(function(a,b){return a-b});
+                document.getElementById("num_id").innerHTML = numric_result;
+            }
+            function min()
+            {
+                let min_result = Math.min.apply(Math,num);
+                document.getElementById("num_id").innerHTML = min_result;
+            }
+            function max()
+            {
+                let max_result = Math.max.apply(Math,num);
+                document.getElementById("num_id").innerHTML=max_result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>function invoaction</title>
+</head>
+<body>
+    <p id="container">
+       <h1 id="id01">function invocation</h1>
+       <p id="id02">My name is Sharon</p>
+       <p>Pasta</p>
+       <p>Pizza</p>
+       <ol>
+        <li>Method invocation</li>
+        <li>Constructor invocation</li>
+        <li>Function invocation / paranthesis invocation</li>
+        <li>Explicit Binding <br>call(),applly(),Bind()</li>
+       </ol>  
+      </p>
+      
+      <button type="button"onclick="redfun()">Click me for red Tag_name</button>  
+      <button type="button"onclick="bluefun()">Click me for blue QSA</button>  
+      <button type="button"onclick="greenfun()">Click me for yellow QS</button><br><br>
+      <fieldset>
+      <legend>BOM properties</legend>
+      <button type="button"onclick="BOMfun()">Click me for BOM properties</button> 
+      </fieldset><br>
+    <br>
+    <fieldset>
+   <legend>Window BOM methods</legend>
+      <button type="button"onclick="window.open()">Window Open()</button> 
+      <button type="button"onclick="window.close()">Window close()</button> 
+      <button type="button"onclick="window.moveTo()">Window moveTo()</button> 
+      <button type="button"onclick="window.resizeTo()">Window resizeTo()</button> 
+      </fieldset>
+    <br>
+    <fieldset>
+    <legend>Window history</legend>
+      <button type="button"onclick="history.back()">window history back()</button>
+      <button type="button"onclick="history.forward()">window history Forward()</button>
+      </fieldset>
+    <br>
+    <fieldset>
+    <legend>Alert BOx</legend>
+      <button onclick="alert('Hello\nHow are you?')">Alert box</button>
+      <button onclick="confirm('Are you a Student')">Confirm Box</button>
+      <button onclick="prompt('Enter your age')">Prompt Box</button>
+      </fieldset>
+    <br>
+    <h2>Timing Events</h2>
+    <fieldset>
+    <legend>Set Time-out</legend>
+    <button type="button" onclick="var1=setTimeout(set_time1(),5000)">Set Time-out</button>
+    <button type="button" onclick="clearTimeout(var1)">Stop Timeout</button>
+  </fieldset>
+  <fieldset>
+    <legend >Set Interval</legend>
+    <button type="button" onclick="var2=setInterval(set_time2(),5000)">Set Interval</button>
+    <button type="button" onclick="clearInterval(var2)">Stop Interval</button>
+</fieldset>
+
+<fieldset>
+  <legend>cookies</legend>
+  <p id="id03"></p>
+</fieldset>
+
+    <script>
+
+      document.cookie = "username = Sharon; expires = Wed,20 May 2023 12:00:00 UTC; path = / ";
+      let x= document.cookie;
+      // document.getElementById("id03").innerHTML=x;
+
+      console.log(x)
+        
+        const cnt = document.getElementById("container");
+    
+        const firstChild = cnt.firstChild;
+        console.log(firstChild);
+
+        const lastChild = cnt.lastChild;
+        console.log(lastChild);
+
+        const olParent = document.querySelector('ol').parentNode;
+        console.log(olParent);
+
+        const h1NextSibling = document.querySelector('h1').nextSibling;
+        console.log(h1NextSibling);
+
+        const pPrevSibling = document.querySelector('p').previousSibling;
+        console.log(pPrevSibling);
+        
+        //node value
+          let h1val= document.getElementById("id01").nodeType;
+          console.log(h1val);
+
+          let pval = document.getElementById("id02").nodeName;
+          console.log(pval);
+
+        const coll = document.getElementsByTagName('p');
+        console.log(coll[1]);
+        console.log(coll[3]);
+        console.log(coll.length);
+
+        function redfun(){
+          const  coll1 = document.getElementsByTagName('p');
+          for(let i=0; i<coll1.length; i++){
+             coll1[i].style.color = "red";
+          }
+        }
+
+        function bluefun(){
+          const  coll2 = document.querySelectorAll('p');
+          for(let i=0; i<coll2.length; i++){
+             coll2[i].style.color = "blue";
+          }
+        }
+
+        function greenfun(){
+          // document.querySelector("p").style.backgroundColor = "yellow";
+        let coll3 = document.querySelector('p');
+        coll3.style.color="green";
+        }
+
+        function BOMfun(){
+          document.getElementById("container").innerHTML = 
+          "Browser inner window width: " +window.innerWidth+ "px<br>"+
+          "Browser inner window height: "+window.innerHeight+ "px<br><br>"+
+          "Browser screen width: "+screen.width+ "px<br>"+
+          "Browser screen height: "+screen.height+ "px<br>"+
+          "Browser screenavail Width: " +screen.availWidth+ "px<br>"+
+          "Browser screenavail height: " +screen.availHeight+ "px<br>"+
+          "Browser screen pixelDepth: " +screen.pixelDepth+ "px<br>"+
+          "Browser screen color Depth: " +screen.colorDepth+ "px<br><br>"+
+          "Browser window location path href : "+window.location.href+ "<br>"+
+          "Browser Window Navigator user agent: "+window.navigator.userAgent+
+          "Browser window navigator language: "+window.navigator.language+
+          "Browser window navigator platform"+window.navigator.platform+
+          "Browser window navigator geolocation: "+ window.navigator.geolocation;
+           }
+
+           function set_time1(){
+          alert('Example of Set Time-out');
+        }
+        function set_time2(){
+          alert('Example of Set interval');
+        }
+         
+           
+      
+        function sayHello(){
+            console.log(`Hello my name is ${this.text}`);
+        }
+        sayHello();
+
+        function sayBye(name){
+            console.log(`Bye ${this.name}`);
+        }
+        sayBye('john');
+        
+        console.log(`Method invocation`);
+        const person = {name:"Sharon", age:23,
+        sayHello()
+        {
+            console.log(`Hi! this is ${this.name}, my  age is ${this.age}`);
+        }
+    }
+        person.sayHello();
+
+    </script>
+
+</body>
+</html>

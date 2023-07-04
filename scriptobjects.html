@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Objects</title>
+        <style>
+            .one{background-color: aqua;}
+            .two{background-color: blue;}
+            .three{background-color: blueviolet;}
+            .four{background-color: rgb(204, 54, 159);}
+        </style>
+    </head>
+    <body>
+        
+        <div class="one">
+        <p>Input String</p>
+        <p id="text"></p><hr>
+        </div>
+        <div class="two">
+        <p>String slice</p>
+        <p id="slice"></p><hr>
+        </div>
+        <div class="three">
+        <p>String substring</p>
+        <p id="substring"></p><hr>
+        </div>
+        <div class="four">
+        <p>String substr</p>
+        <p id="substr"></p>
+        </div>
+       
+        <script>
+            let text = "table, chairs, laptops";
+            let text2 = "i love bangalore";
+            document.getElementById("text").innerHTML=text;
+            let slice = text.slice(15,22);
+            document.getElementById("slice").innerHTML=slice;
+            let substring = text.substring(0,10);
+            document.getElementById("substring").innerHTML=substring;
+            let substr = text.substr(5,21);
+            document.getElementById("substr").innerHTML=substr;
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Methods</title>
+    </head>
+    <body>
+        <h1>Array Methods</h1>
+        <p><b>toString()</b></p>
+        <p id="met1"></p><hr>
+        <p><b>Join()</b></p>
+        <p id="met2"></p><hr>
+        <p><b>Pop()</b></p>
+        <p id="met3"></p><hr>
+        <p><b>Push()</b></p>
+        <p id="met4"></p>
+        <p id="met4.1"></p><hr>
+        <p><b>Shift()</b></p>
+        <p id="met5"></p>
+        <p id="met5.1"></p><hr>
+        <p><b>UnShift()</b></p>
+        <p id="met6"></p>
+        <p id="met6.1"></p><hr>
+        <!-- <p><b>Delete()</b></p>
+        <p id="met7"></p><hr>
+        <p><b>Concat()</b></p>
+        <p id="met8"></p>
+        <p id="met8.1"></p><hr> -->
+        <p><b>Splice()</b></p>
+        <p id="met9"></p>
+        <p id="met9.1"></p><hr>
+        <p><b>Slice()</b></p>
+        <p id="met10"></p><hr>
+        
+        <script>
+            const name1 = ["Sharon","Karen","Ruby","Carmalite","Arun","Pramila","George"];
+            const fruits = ["Banana","Grapes","Apple","Mango"];
+            document.getElementById("met1").innerHTML = name1.toString();
+            document.getElementById("met2").innerHTML = name1.join("+");
+            document.getElementById("met3").innerHTML = name1.pop();
+            document.getElementById("met4").innerHTML = name1.push("Clive");
+            document.getElementById("met4.1").innerHTML = name1;
+            document.getElementById("met5").innerHTML = name1.shift();
+            document.getElementById("met5.1").innerHTML = name1;
+            document.getElementById("met6").innerHTML = name1.unshift("Alice");
+            document.getElementById("met6.1").innerHTML = name1;
+            // document.getElementById("met7").innerHTML = name1.delete("Alice");
+            // document.getElementById("met8").innerHTML = name1.concat(fruits);
+            // document.getElementById("met8.1").innerHTML = name1;
+            document.getElementById("met9").innerHTML = fruits.splice(2,0,"Lemon","Kiwi");
+            document.getElementById("met9.1").innerHTML = fruits;
+            document.getElementById("met10").innerHTML = fruits.slice(1);
+            
+        </script>
+    </body>
+</html>
